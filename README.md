@@ -1,3 +1,39 @@
+# Flickr Image Gallery App (Work in Progress)
+
+A React application that uses the Flickr API to create an image gallery
+
+## Motivation
+
+This project was created as a part of the Treehouse Full Stack JavaScript Techdegree program
+
+## Features
+
+* Gives the user the option to display images from three default categories
+* The user can also search for different types of images
+* 24 images are displayed using the Flickr API
+* A load indicator displays each time the app fetches new data
+* If no matches are found to a search,a user-friendly message is displayed
+* A 404 page is displayed if the user tries to access a URL that does not exist
+
+## Built With
+
+* [React](https://reactjs.org/)
+* [Create React App](https://github.com/facebook/create-react-app) See below for more info
+
+## API
+
+* [Flickr](https://www.flickr.com/services/api/)
+
+## Links
+
+* [Repository](https://github.com/LeeVaughn/react-gallery-app)
+
+## Author
+
+[Daniel Lee Vaughn](https://github.com/LeeVaughn)
+
+## About Create React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
