@@ -50,7 +50,7 @@ export default class App extends Component {
       // renders root router that listens to URL changes
       <BrowserRouter>
         <div className="container">
-          <Nav />
+          <Nav onSearch={this.performSearch} />
 
           {/* renders the first route that matches the path or the error route if no mathching path is found */}
           <Switch>
