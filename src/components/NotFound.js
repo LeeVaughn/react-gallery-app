@@ -1,12 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const NotFound = () => (
     <div className="photo-container">
-        <h2>Results</h2>
         <ul>
             <li className="not-found">
-                <h3>No Results Found</h3>
-                <p>You search did not return any results. Please try again.</p>
+                <h2>No Results Found</h2>
+                <p>Your search did not return any results. Please try again.</p>
             </li>
         </ul>
     </div>
