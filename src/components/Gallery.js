@@ -1,23 +1,28 @@
 import React from "react";
+import GalleryItem from "./GalleryItem";
+import NotFound from "./NotFound";
 
-const Gallery = (props) => (
-    <div className="photo-container">
-        <h2>{props.searchTerm} Images</h2>
-        <ul>
-            <li>
-                <img src="https://farm5.staticflickr.com/4334/37032996241_4c16a9b530.jpg" alt="" />
-            </li>
-            <li>
-                <img src="https://farm5.staticflickr.com/4342/36338751244_316b6ee54b.jpg" alt="" />
-            </li>
-            <li>
-                <img src="https://farm5.staticflickr.com/4343/37175099045_0d3a249629.jpg" alt="" />
-            </li>
-            <li>
-                <img src="https://farm5.staticflickr.com/4425/36337012384_ba3365621e.jpg" alt="" />
-            </li>
-        </ul>
-    </div>
-);
+const Gallery = props => {
+    // stores data
+    const results = props.data;
+    let images;
+
+    if (results.length > 0) {
+        // maps over array to return a gif component for each object in array
+        // passes url as a prop
+        images = results.map(image => <GalleryItem url={`https://farm${image.farm}.staticflickr.com/${image.server}/${image.id}_${image.secret}_m.jpg`} key={image.id} />);
+    } else {
+        images = <NotFound />
+    }
+    
+    return (
+        <div className="photo-container">
+            {/* <h2>{props.category} Images</h2> */}
+            <ul>
+                {images}
+            </ul>
+        </div>
+    )
+};
 
 export default Gallery;

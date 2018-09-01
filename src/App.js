@@ -29,13 +29,12 @@ export default class App extends Component {
   }
 
   // handles API request
-  performSearch = (query = "beach") => {
+  performSearch = (query = "pandas") => {
     axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&in_gallery=&per_page=${this.state.perPage}&format=json&nojsoncallback=1`)
       .then(response => {
         // handle success
         this.setState({
           images: response.data.photos.photo,
-          category: {query},
           loading: false
         });
       })
@@ -56,7 +55,7 @@ export default class App extends Component {
           {/* renders the first route that matches the path or the error route if no mathching path is found */}
           <Switch>
             <Route exact path="/" />
-            <Route path="/gallery" render={ () => <Gallery searchTerm="Dog" /> } />
+            <Route path="/gallery" render={ () => <Gallery data={this.state.images} /> } />
             <Route path="/notfound" component={NotFound} />
             <Route component={Error} />
           </Switch>
