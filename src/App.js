@@ -35,6 +35,7 @@ export default class App extends Component {
         // handle success
         this.setState({
           images: response.data.photos.photo,
+          category: query,
           loading: false
         });
       })
@@ -45,7 +46,6 @@ export default class App extends Component {
   }
 
   render() {
-    console.log(this.state.images);
     return (
       // renders root router that listens to URL changes
       <BrowserRouter>
@@ -55,7 +55,7 @@ export default class App extends Component {
           {/* renders the first route that matches the path or the error route if no mathching path is found */}
           <Switch>
             <Route exact path="/" />
-            <Route path="/gallery" render={ () => <Gallery data={this.state.images} /> } />
+            <Route path="/gallery" render={ () => <Gallery data={this.state.images} category={this.state.category} /> } />
             <Route path="/notfound" component={NotFound} />
             <Route component={Error} />
           </Switch>
