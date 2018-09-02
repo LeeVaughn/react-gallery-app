@@ -12,7 +12,7 @@ export default class Nav extends Component {
     
     handleSubmit = e => {
         e.preventDefault();
-        this.props.onSearch(this.state.searchText);
+        this.props.onSearch(this.query.value);
         e.currentTarget.reset();
     }
 
@@ -37,8 +37,8 @@ export default class Nav extends Component {
                 <nav className="main-nav">
                     <ul>
                         <li><NavLink to="/pandas">Pandas</NavLink></li>
-                        <li><NavLink to="/dogs">Dogs</NavLink></li>
-                        <li><NavLink to="/gallery">Beaches</NavLink></li>
+                        <li><NavLink to="/puppies">Puppies</NavLink></li>
+                        <li><NavLink to="/sunsets">Sunsets</NavLink></li>
                     </ul>
                 </nav>
             </div>
