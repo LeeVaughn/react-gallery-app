@@ -36,9 +36,9 @@ export default class Nav extends Component {
 
                 <nav className="main-nav">
                     <ul>
-                        <li><NavLink to="/gallery">Pandas</NavLink></li>
-                        <li><NavLink to="/gallery">Dogs</NavLink></li>
-                        <li><NavLink to="/gallery">Nature</NavLink></li>
+                        <li><NavLink to="/pandas">Pandas</NavLink></li>
+                        <li><NavLink to="/dogs">Dogs</NavLink></li>
+                        <li><NavLink to="/gallery">Beaches</NavLink></li>
                     </ul>
                 </nav>
             </div>
