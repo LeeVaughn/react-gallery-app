@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 //components
-import Nav from "./Nav";
 import Gallery from "./Gallery";
 
 class Pandas extends Component {
@@ -10,10 +9,8 @@ class Pandas extends Component {
   }
 
   render() {
-    console.log(this.props.images);
     return (
       <div>
-        <Nav />
         {
           (this.props.loading)
             ? <p>Loading images...</p>

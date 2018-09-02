@@ -24,12 +24,12 @@ class App extends Component {
   }
 
   // runs as soon as App is mounted to the DOM
-  // componentDidMount() {
-  //   this.performSearch();
-  // }
+  componentDidMount() {
+    this.performSearch();
+  }
 
   // handles API request
-  performSearch = (query = "pandas") => {
+  performSearch = (query = "dogs surfing") => {
     axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&in_gallery=&per_page=${this.state.perPage}&format=json&nojsoncallback=1`)
       .then(response => {
         // handle success
