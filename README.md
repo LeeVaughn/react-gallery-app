@@ -12,13 +12,35 @@ This project was created as a part of the Treehouse Full Stack JavaScript Techde
 * The user can also search for different types of images
 * 24 images are displayed using the Flickr API
 * A load indicator displays each time the app fetches new data
-* If no matches are found to a search,a user-friendly message is displayed
+* A user-friendly message is displayed if there are no matches to a search
 * A 404 page is displayed if the user tries to access a URL that does not exist
+
+## To Run
+
+* Download project files by running ```git clone https://github.com/LeeVaughn/react-gallery-app```
+* Navigate to the project folder
+* Install dependencies with ```npm install```
+* You will need to create your own config.js file using this format:
+
+``` javascript
+const apiKey = "...";
+
+export default apiKey;
+```
+
+* The config.js file should be saved in src directory
+* Run the program by using the ```npm start``` command
 
 ## Built With
 
+* [Node.js](https://nodejs.org/en/)
 * [React](https://reactjs.org/)
 * [Create React App](https://github.com/facebook/create-react-app) See below for more info
+
+## Dependencies
+
+* [axios](https://www.npmjs.com/package/axios) Promise based HTTP client for the browser and Node.js
+* [react-router-dom](https://www.npmjs.com/package/react-router-dom) DOM bindings for React Router
 
 ## API
 
