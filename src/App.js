@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 // components
 import Nav from "./components/Nav";
+import Search from "./components/Search";
 import Pandas from "./components/Pandas";
+import Puppies from "./components/Puppies";
+import Sunsets from "./components/Sunsets";
 import Gallery from "./components/Gallery";
-import NotFound from "./components/NotFound";
 import Error from "./components/Error";
 import apiKey from "./config.js";
 
@@ -55,15 +57,32 @@ class App extends Component {
 
           {/* renders the first route that matches the path or the error route if no mathching path is found */}
           <Switch>
-            <Route exact path="/" render={ () => <Gallery data={this.state.images} category={this.state.category} /> } />
-            <Route path="/pandas" render={ () => <Pandas
+            <Route exact path="/" />
+            <Route path="/search" render={ () => <Search
               onSearch={this.performSearch}
-              data={this.state.images}
+              images={this.state.images}
               category={this.state.category}
               loading={this.state.loading} /> }
-              />
-            <Route path="/gallery" render={ () => <Gallery data={this.state.images} category={this.state.category} /> } />
-            <Route path="/notfound" component={NotFound} />
+            />
+            <Route path="/pandas" render={ () => <Pandas
+              onSearch={this.performSearch}
+              images={this.state.images}
+              category={this.state.category}
+              loading={this.state.loading} /> }
+            />
+            <Route path="/puppies" render={ () => <Puppies
+              onSearch={this.performSearch}
+              images={this.state.images}
+              category={this.state.category}
+              loading={this.state.loading} /> }
+            />
+            <Route path="/sunsets" render={ () => <Sunsets
+              onSearch={this.performSearch}
+              images={this.state.images}
+              category={this.state.category}
+              loading={this.state.loading} /> }
+            />
+            {/* <Route path="/gallery" render={ () => <Gallery data={this.state.images} category={this.state.category} /> } /> */}
             <Route component={Error} />
           </Switch>
         </div>
