@@ -3,6 +3,7 @@ import GalleryItem from "./GalleryItem";
 import NotFound from "./NotFound";
 
 const Gallery = props => {
+    console.log(props);
     // stores data
     const results = props.data;
     let images;
