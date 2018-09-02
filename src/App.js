@@ -81,7 +81,6 @@ class App extends Component {
               category={this.state.category}
               loading={this.state.loading} /> }
             />
-            {/* <Route path="/gallery" render={ () => <Gallery data={this.state.images} category={this.state.category} /> } /> */}
             <Route component={Error} />
           </Switch>
         </div>
