@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import SearchForm from "./SearchForm";
 
 //components
 import Gallery from "./Gallery";
@@ -11,6 +12,7 @@ class Search extends Component {
   render() {
     return (
       <div>
+        <SearchForm onSearch={this.performSearch} />
         {
           (this.props.loading)
             ? <p>Loading images...</p>

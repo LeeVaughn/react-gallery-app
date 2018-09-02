@@ -8,7 +8,6 @@ import Search from "./components/Search";
 import Pandas from "./components/Pandas";
 import Puppies from "./components/Puppies";
 import Sunsets from "./components/Sunsets";
-import Gallery from "./components/Gallery";
 import Error from "./components/Error";
 import apiKey from "./config.js";
 
@@ -53,17 +52,11 @@ class App extends Component {
       // renders root router that listens to URL changes
       <BrowserRouter>
         <div className="container">
-          <Nav onSearch={this.performSearch} />
+          <Nav />
 
           {/* renders the first route that matches the path or the error route if no mathching path is found */}
           <Switch>
-            <Route exact path="/" />
-            <Route path="/search" render={ () => <Search
-              onSearch={this.performSearch}
-              images={this.state.images}
-              category={this.state.category}
-              loading={this.state.loading} /> }
-            />
+            <Route exact path="/" render={ () => <Redirect to="/search" />} />
             <Route path="/pandas" render={ () => <Pandas
               onSearch={this.performSearch}
               images={this.state.images}
@@ -77,6 +70,12 @@ class App extends Component {
               loading={this.state.loading} /> }
             />
             <Route path="/sunsets" render={ () => <Sunsets
+              onSearch={this.performSearch}
+              images={this.state.images}
+              category={this.state.category}
+              loading={this.state.loading} /> }
+            />
+            <Route path="/search" render={ () => <Search
               onSearch={this.performSearch}
               images={this.state.images}
               category={this.state.category}

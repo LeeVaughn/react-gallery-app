@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-export default class Nav extends Component {
+class SearchForm extends Component {
     state = {
         searchText: ""
     }
-    
+
     onSearchChange = e => {
         this.setState({ searchText: e.target.value })
     }
@@ -17,6 +17,7 @@ export default class Nav extends Component {
 
     render () {
         return (
+            <div>
                 <form className="search-form" onSubmit={this.handleSubmit}>
                     <input type="search"
                     onChange={this.onSearchChange}
@@ -31,6 +32,9 @@ export default class Nav extends Component {
                         </svg>
                     </button>
                 </form>
+            </div>
         );
     }
 }
+
+export default SearchForm;
