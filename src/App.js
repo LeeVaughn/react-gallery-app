@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import apiKey from "./config.js";
 
 // components
 import Nav from "./components/Nav";
-import Search from "./components/Search";
 import Pandas from "./components/Pandas";
 import Puppies from "./components/Puppies";
-import Sunsets from "./components/Sunsets";
+import Sunrises from "./components/Sunrises";
+import Search from "./components/Search";
 import Error from "./components/Error";
-import apiKey from "./config.js";
 
 class App extends Component {
 
@@ -53,8 +53,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="container">
           <Nav />
-
-          {/* renders the first route that matches the path or the error route if no mathching path is found */}
+          {/* renders the first route that matches the path or the error route if no matching path is found */}
           <Switch>
             <Route exact path="/" render={ () => <Redirect to="/search" />} />
             <Route path="/pandas" render={ () => <Pandas
@@ -69,7 +68,7 @@ class App extends Component {
               category={this.state.category}
               loading={this.state.loading} /> }
             />
-            <Route path="/sunsets" render={ () => <Sunsets
+            <Route path="/sunrises" render={ () => <Sunrises
               onSearch={this.performSearch}
               images={this.state.images}
               category={this.state.category}
