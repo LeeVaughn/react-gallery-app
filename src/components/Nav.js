@@ -9,7 +9,7 @@ class Nav extends Component {
                     <ul>
                         <li><NavLink to="/pandas">Pandas</NavLink></li>
                         <li><NavLink to="/puppies">Puppies</NavLink></li>
-                        <li><NavLink to="/sunsets">Sunsets</NavLink></li>
+                        <li><NavLink to="/sunrises">Sunrises</NavLink></li>
                         <li><NavLink to="/search">Search</NavLink></li>
                     </ul>
                 </nav>
