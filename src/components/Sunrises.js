@@ -3,9 +3,9 @@ import React, { Component } from "react";
 //components
 import Gallery from "./Gallery";
 
-class Sunsets extends Component {
+class Sunrises extends Component {
   componentDidMount() {
-    this.props.onSearch("Sunsets");
+    this.props.onSearch("Sunrises");
   }
 
   render() {
@@ -21,4 +21,4 @@ class Sunsets extends Component {
   }
 }
 
-export default Sunsets;
+export default Sunrises;
