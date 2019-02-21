@@ -47,7 +47,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.images)
     return (
       // renders root router that listens to URL changes
       <BrowserRouter>
