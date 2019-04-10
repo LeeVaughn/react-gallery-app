@@ -4,8 +4,7 @@ import NotFound from "./NotFound";
 
 // uses data supplied as props to create image gallery
 const Gallery = props => {
-    console.log(props);
-    // stores data
+    // stores image data
     const results = props.data;
     let images;
 
