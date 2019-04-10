@@ -14,14 +14,10 @@ import Error from "./components/Error";
 class App extends Component {
 
   // defines initial state
-  constructor() {
-    // allows the use of this inside the construtor within the context of the App class
-    super();
-    this.state = {
-      images: [],
-      loading: true,
-      perPage: 24
-    }
+  state = {
+    images: [],
+    loading: true,
+    perPage: 24
   }
 
   // runs as soon as App is mounted to the DOM
