@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 // creates li element for an image
 const GalleryItem = props => (
