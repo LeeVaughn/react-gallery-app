@@ -45,7 +45,7 @@ class App extends Component {
   render() {
     return (
       // renders root router that listens to URL changes
-      <BrowserRouter>
+      <BrowserRouter basename="/react-gallery-app">
         <div className="container">
           <Nav />
           {/* renders the first route that matches the path or the error route if no matching path is found */}
