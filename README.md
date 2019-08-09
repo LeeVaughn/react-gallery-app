@@ -48,6 +48,7 @@ export default apiKey;
 
 ## Links
 
+* [Live Link](https://leevaughn.github.io/react-gallery-app/)
 * [Repository](https://github.com/LeeVaughn/react-gallery-app)
 
 ## Author
